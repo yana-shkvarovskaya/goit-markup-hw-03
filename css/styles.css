@@ -47,7 +47,7 @@ ul {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-
+outline: 2px solid purple;
 }
 
 .section{
@@ -70,15 +70,30 @@ section.no-bottom-padding{
   text-align: center;
 }
 
-/* Header */
-.page-header .navigation {
-  width: 1200px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+.image{
+display: block;
 }
+
+/* Header */
+
+/* Navigation */
+.navigation{
+  display: flex;
+  align-items: center;
+  
+}
+.container.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 /* logo */
 .logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
   color: var(--title-text-color);
 
   font-family: Raleway, sans-serif;
@@ -90,15 +105,29 @@ section.no-bottom-padding{
   color: var(--accent-color);
 }
 
+
+
 /* site nav */
+.site-nav{
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav .item:not(:last-child){
+  margin-right: 50px;
+}
+
 .site-nav .link {
   color: var(--title-text-color);
 
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.15;
   letter-spacing: 0.02em;
   text-decoration: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -111,10 +140,11 @@ section.no-bottom-padding{
 /* auth-nav */
 
 .auth-nav {
-  width: 1200px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  display: flex;
+}
+
+.auth-nav .item + .item{
+  margin-left: 50px;
 }
 .auth-nav .link {
   color: var(--primary-text-color);
@@ -128,6 +158,10 @@ section.no-bottom-padding{
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
+}
+
+.auth-nav .link.shadow{
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* hero */
@@ -174,6 +208,17 @@ section.no-bottom-padding{
 }
 
 /* Features */
+.features{
+  display: flex;
+ justify-content: space-between;
+}
+
+.features .item{
+  width: 270px;
+}
+.features .item:not(:last-child){
+  margin-right: 30px;
+}
 .features .title {
   color: var(--title-text-color);
   margin-top: 0;
@@ -193,7 +238,12 @@ section.no-bottom-padding{
 
 /* Work */
 .work {
+  display: flex;
   margin-top: 0;
+  justify-content: center;
+}
+.work .item:not(:last-child){
+margin-right: 30px;
 }
 
 /* Team */
@@ -204,12 +254,22 @@ section.no-bottom-padding{
 }
 
 .team {
-  background-color: var(--primary-white-color);
+  display: flex;
+  background-color: var(--secondary-bcg-color)
 }
 
 .team .card{
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  
+  width: 270px;
   padding-top: 0;
   padding-bottom: 30px;
+}
+
+.team .card:not(:last-child){
+  margin-right: 30px;
 }
 
 .team .title {
@@ -221,6 +281,7 @@ section.no-bottom-padding{
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
 }
 
 .team .position {
@@ -228,6 +289,7 @@ section.no-bottom-padding{
   line-height: 1.19;
   margin-top: 0;
   margin-bottom: 0;
+  text-align: center;
 }
 
 /* Footer */
@@ -282,10 +344,34 @@ address {
 
 /* Стили для portfolio.html */
 
+.section .portfolio-title{
+  margin: 0;
+
+  display: inline-block;
+}
+
+.section .fields{
+  display: flex;
+  margin-bottom: 34px;
+  justify-content: center;
+}
+
+.fields .item:not(:last-child){
+  margin-right: 8px;
+}
 .fields .button {
   color: var(--title-text-color);
   background-color: var(--secondary-bcg-color);
   cursor: pointer;
+
+  display: inline-block;
+  min-width: 73px;
+  text-align: center;
+  padding: 6px 22px;
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  border: transparent;
 
   font-family: inherit;
   font-weight: 500;
@@ -298,11 +384,36 @@ address {
   background-color: var(--accent-color);
 }
 
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+.project-list .item{
+  width: 370px;
+  margin: 15px;
+}
+.project-list .item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.project-list .item:nth-last-child(-n+3){
+  margin-bottom: 0;
+}
+
+.project-list .description{
+  border: 1px solid #EEEEEE;
+  padding: 20px 24px;
+}
+
+
 .project-list .link {
   text-decoration: none;
 }
 .project-list .title {
   color: var(--title-text-color);
+  margin-top: 0;
+  margin-bottom: 4px;
 
   font-size: 18px;
   line-height: 2;
@@ -311,6 +422,7 @@ address {
 
 .project-list .text {
   color: var(--primary-text-color);
+  margin: 0;
 
   font-size: 16px;
   line-height: 1.88;

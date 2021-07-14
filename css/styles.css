@@ -47,7 +47,6 @@ ul {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-outline: 2px solid purple;
 }
 
 .section{
@@ -75,6 +74,9 @@ display: block;
 }
 
 /* Header */
+.page-header{
+  border: 1px solid #ECECEC;
+}
 
 /* Navigation */
 .navigation{
@@ -319,16 +321,16 @@ address {
 }
 .adress .postal {
   color: var(--primary-white-color);
-  margin-bottom: 9px;
 }
 .adress .email {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  margin-bottom: 9px;
+  margin-top: 9px;
 }
 .adress .tel {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  margin-top: 9px;
 }
 
 .adress .email:hover,

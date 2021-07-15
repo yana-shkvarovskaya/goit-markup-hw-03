@@ -73,7 +73,7 @@ section.no-bottom-padding {
 
 /* Header */
 .page-header {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 /* Navigation */
@@ -154,11 +154,9 @@ section.no-bottom-padding {
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
-}
-
-.auth-nav .link.shadow {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 
 /* hero */
 .hero {
@@ -259,8 +257,12 @@ section.no-bottom-padding {
   border-radius: 0px 0px 4px 4px;
 
   width: 270px;
-  padding-top: 0;
+}
+
+.card-description{
+  padding-top: 30px;
   padding-bottom: 30px;
+  margin: 0;
 }
 
 .team .card:not(:last-child) {
@@ -270,8 +272,8 @@ section.no-bottom-padding {
 .team .title {
   color: var(--title-text-color);
 
-  margin-top: 30px;
   margin-bottom: 10px;
+  margin-top: 0;
 
   font-weight: 500;
   font-size: 16px;
@@ -309,17 +311,20 @@ address {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-  margin-top: 20px;
 }
 .adress .postal {
+  display: block;
   color: var(--primary-white-color);
+  margin-top: 20px;
 }
 .adress .email {
+  display: block;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   margin-top: 9px;
 }
 .adress .tel {
+  display: block;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   margin-top: 9px;
@@ -345,7 +350,7 @@ address {
 
 .section .fields {
   display: flex;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   justify-content: center;
 }
 
@@ -358,12 +363,10 @@ address {
   cursor: pointer;
 
   display: inline-block;
-  min-width: 73px;
   text-align: center;
   padding: 6px 22px;
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  
   border-radius: 4px;
   border: transparent;
 
@@ -376,6 +379,8 @@ address {
 .fields .button:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .project-list {
